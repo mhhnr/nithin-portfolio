@@ -8,9 +8,9 @@ const person = {
   },
   role: "Data Engineer",
   avatar: "/images/avatar.jpg",
-  location: "America/New_York",
+  location: "USA",
   locationDisplay: "Atlanta, GA",
-  languages: ["English", "Telugu"], 
+  languages: ["English","Hindi", "Telugu"], 
 };
 
 const newsletter = {
