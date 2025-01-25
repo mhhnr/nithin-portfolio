@@ -88,40 +88,51 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        5+ years of experience in healthcare & fintech industries as a Data Engineer, proficient with Big Data (Cloudera, HortonWorks, Databricks).
+        3+ years of experience in fintech and healthcare industries as a Data Engineer, proficient with Big Data (Cloudera, HortonWorks, Databricks).
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "Elsource Inc",
+        company: "Elsource Inc, Atlanta, GA",
         timeframe: "Jan 2024 - Present",
         role: "Data Engineer",
         achievements: [
           <>
-            Built and orchestrated AI agent systems using LangChain and CrewAI for data processing
-            and analysis via AWS Lambda and ECS.
+            Designed scalable data pipelines using Apache Kafka and AWS Kinesis for real-time processing of medical data, 
+            handling 100,000+ daily patient records while maintaining sub-second latency.
           </>,
           <>
-            Designed a multi-modal vector storage solution with Milvus and PostgreSQL for enabling sub-second
-            queries across millions of documents.
+            Architected and implemented a healthcare data processing system integrating clinical, genomic, and EMR data sources.
           </>,
           <>
-            Strong background in OLAP/OLTP database architecture, data modeling (Star/Snowflake), and ETL/ELT frameworks.
+            Designed and deployed a RAG system using Lang Chain and vector databases (Milvus, pgvector) for intelligent 
+            medical document processing, improving clinical decision support accuracy by 40%.
+          </>,
+          <>
+            Implemented fine-tuning pipelines for medical LLMs using PEFT and LoRA techniques, achieving 85% accuracy 
+            on specialized healthcare tasks while reducing training time by 60%.
+          </>,
+          <>
+            Developed an autonomous AI agent system using LangChain and CrewAI for automated medical research and 
+            patient monitoring, reducing manual documentation time by 70%.
+          </>,
+          <>
+            Created comprehensive data schemas and vector search capabilities for efficient processing of clinical, genomic, 
+            and EMR data using PostgreSQL and specialized vector indexes.
+          </>,
+          <>
+            Built robust ETL workflows using Airflow and AWS Glue for processing structured and unstructured medical data 
+            ensuring HIPAA compliance.
+          </>,
+          <>
+            Deployed the entire infrastructure on AWS using SageMaker, Bedrock, and Lambda, achieving 99.99% system availability.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
         company: "Previous Experience",
@@ -144,40 +155,121 @@ const about = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Studies",
     institutions: [
       {
-        name: "University of Data Science",
-        description: <>Studied Data Engineering and Machine Learning</>,
+        name: "HULT, Boston",
+        description: <>(Sept 2022 – Aug 2023)</>,
+        details: <>Master of International Business, Specialisation in Business Analytics.</>,
       },
       {
-        name: "Big Data Certifications",
-        description: <>Certified in Hadoop, Spark, and Cloud Technologies</>,
+        name: "Birla Institute of Technology and Science, Pilani, India",
+        description: <>(May 2017 – May 2021)</>,
+        details: <>Bachelor of Pharmacy</>,
       },
     ],
   },
+  internship: {
+    display: true,
+    title: "Internship",
+    experiences: [
+      {
+        name: "Microsoft - Enterprise Security Policy Management Platform",
+        role: "Full Stack Engineer",
+        timeframe: "Jan 2023 - Apr 2023",
+        achievements: [
+          "Architected and deployed a cloud-native security policy platform achieving sub-second latency for 90%+ policy transactions",
+          "Built real-time policy streaming using Apache Spark Streaming and Kafka with GraphQL (Hasura backend, Houdini test coverage)",
+          "Implemented multi-tenant authentication using OpenID Connect with RBAC and organization-based security",
+          "Developed responsive UI and landing page with SvelteKit, TailwindCSS, and component libraries achieving 98% test coverage",
+          "Containerized application using Docker and orchestrated with Turborepo for efficient monorepo management"
+        ]
+      }
+    ]
+  },
+  aiProjects: {
+    display: true,
+    title: "AI Projects",
+    projects: [
+      {
+        name: "AI Resume Parser",
+        description: "a high-throughput resume parsing system processing 1000s of documents in minutes."
+      },
+      {
+        name: "Valmiki",
+        description: "Developed an agentic AI library management system using Lang Chain and vector databases."
+      },
+      {
+        name: "GAP E-commerce + Target Shopping AI Assistant",
+        description: "Built a voice-assisted AI agent MVP/POC for personalized and quick shopping experiences."
+      }
+    ]
+  },
+  publications: {
+    display: true,
+    title: "Publication",
+    items: [
+      {
+        name: "Brain Computer Interface Drone",
+        link: "Link",
+        description: "Controlled a drone by thinking using Brain Computer Interface technology. 30+ cited my research paper, 500+ chapter downloads."
+      }
+    ]
+  },
   technical: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Technical skills",
     skills: [
       {
         title: "Big Data Technologies / Distribution",
-        description: <>HortonWorks, Cloudera, Hadoop, Spark, HDFS, MapReduce, Sqoop, Hive, Oozie, Zookeeper, Kafka, Flume, Databricks, Apache Atlas, AWS Data Factory</>,
+        description: <>HortonWorks, Cloudera, Hadoop, Apache Spark, HDFS, MapReduce, Sqoop, Hive, Oozie, Zookeeper, Kafka, Flume, Databricks, Apache Airflow, Azure Data Factory</>,
+      },
+      {
+        title: "AI Orchestration & Agents",
+        description: <>AWS SageMaker, Bedrock, LangChain, LangGraph, LangFlow, CrewAI</>,
       },
       {
         title: "ML & NLP",
-        description: <>PyTorch, Transformers, LangChain, OpenAI's GPT-3.5/4, BERT, MLlib, GraphX/SQL, Decision Trees, Linear/Logistic Regression, Statistical Modeling</>,
+        description: <>BioBERT, Transformers (including domain-specific), LoRA, PEFT, Spark MLlib, GraphX, Decision Trees, Linear/Logistic Regression, Statistical Modeling</>,
+      },
+      {
+        title: "Programming, Scripting, Python Packages",
+        description: <>Scala, Python, SQL, T-SQL, Pandas, NumPy, SciPy, Matplotlib, Scikit-learn</>,
+      },
+      {
+        title: "SQL Databases",
+        description: <>MySQL, Oracle, MS-SQL Server, Teradata</>,
+      },
+      {
+        title: "NoSQL Database",
+        description: <>HBase, Cassandra, DynamoDB, MongoDB</>,
+      },
+      {
+        title: "Graph",
+        description: <>Nhost, Hasura GraphQL, Neo4j, Amazon Neptune, ArangoDB, TigerGraph, JanusGraph, Memgraph, Dgraph, and NebulaGraph</>,
+      },
+      {
+        title: "ETL/Data Warehousing",
+        description: <>Informatica, SSIS, Snowflake</>,
       },
       {
         title: "Cloud Computing",
-        description: <>AWS (S3, RDS, Athena, Glue, Kinesis, Redshift, Lambda, GCS, EMR)</>,
+        description: <>AWS (S3, RDS, Athena, Glue, Kinesis, Redshift, Lambda, ECS, EMR)</>,
       },
       {
-        title: "Databases",
-        description: <>MySQL, Oracle, MS-SQL Server, HBase, Cassandra, DynamoDB, MongoDB</>,
+        title: "Visualization Tools",
+        description: <>Power BI, Tableau, Quicksight, Kibana</>,
       },
-    ],
+      {
+        title: "DevOps & CI/CD",
+        description: <>Turborepo, monorepo, Jenkins, Kubernetes, Rancher, GitHub Enterprise</>,
+      },
+      {
+        title: "Certification",
+        description: <>AWS Certified Data Engineer, GCP Certified Associate Cloud Engineer</>,
+      }
+    ]
   },
 };
 
