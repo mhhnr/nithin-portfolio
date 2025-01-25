@@ -1,15 +1,16 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Nithin",
+  lastName: "Reddy Manupati", 
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Data Engineer",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "America/New_York",
+  locationDisplay: "Atlanta, GA",
+  languages: ["English", "Telugu"], 
 };
 
 const newsletter = {
@@ -17,8 +18,8 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I occasionally write about data engineering, AI/ML, and share thoughts on the intersection of
+      big data and engineering.
     </>
   ),
 };
@@ -28,13 +29,13 @@ const social = [
   // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    icon: "github", 
+    link: "https://github.com/hardharanithin",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/hardharanithin",
   },
   {
     name: "X",
@@ -44,7 +45,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:hardharanithin@gmail.com",
   },
 ];
 
@@ -52,11 +53,17 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: (
+    <>
+      Data Engineer
+      <br />
+      <span style={{ fontSize: '0.75em' }}>AI & Big Data Specialist</span>
+    </>
+  ),
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Nithin, a data engineer specializing in AI & Big Data at <InlineCode>Elsource Inc</InlineCode>, where I build
+      <br /> scalable data solutions. After hours, I work on ML/AI projects.
     </>
   ),
 };
@@ -64,7 +71,7 @@ const home = {
 const about = {
   label: "About",
   title: "About me",
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from ${person.locationDisplay}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -81,9 +88,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        5+ years of experience in healthcare & fintech industries as a Data Engineer, proficient with Big Data (Cloudera, HortonWorks, Databricks).
       </>
     ),
   },
@@ -92,17 +97,20 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Elsource Inc",
+        timeframe: "Jan 2024 - Present",
+        role: "Data Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Built and orchestrated AI agent systems using LangChain and CrewAI for data processing
+            and analysis via AWS Lambda and ECS.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Designed a multi-modal vector storage solution with Milvus and PostgreSQL for enabling sub-second
+            queries across millions of documents.
+          </>,
+          <>
+            Strong background in OLAP/OLTP database architecture, data modeling (Star/Snowflake), and ETL/ELT frameworks.
           </>,
         ],
         images: [
@@ -116,17 +124,19 @@ const about = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Previous Experience",
+        timeframe: "2018 - 2024",
+        role: "Data Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Implemented ML solutions using Spark Streaming, Kafka, Flume, Apache Airflow and
+            developed real-time streaming solutions.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Hands-on experience in data migration between RDBMS, NoSQL, and Hadoop (Sqoop, Flume).
+          </>,
+          <>
+            Built real-time data streaming solutions using Spark Streaming, Kafka, Flume, Apache Airflow.
           </>,
         ],
         images: [],
@@ -138,12 +148,12 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "University of Data Science",
+        description: <>Studied Data Engineering and Machine Learning</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Big Data Certifications",
+        description: <>Certified in Hadoop, Spark, and Cloud Technologies</>,
       },
     ],
   },
@@ -152,36 +162,20 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Big Data Technologies / Distribution",
+        description: <>HortonWorks, Cloudera, Hadoop, Spark, HDFS, MapReduce, Sqoop, Hive, Oozie, Zookeeper, Kafka, Flume, Databricks, Apache Atlas, AWS Data Factory</>,
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "ML & NLP",
+        description: <>PyTorch, Transformers, LangChain, OpenAI's GPT-3.5/4, BERT, MLlib, GraphX/SQL, Decision Trees, Linear/Logistic Regression, Statistical Modeling</>,
+      },
+      {
+        title: "Cloud Computing",
+        description: <>AWS (S3, RDS, Athena, Glue, Kinesis, Redshift, Lambda, GCS, EMR)</>,
+      },
+      {
+        title: "Databases",
+        description: <>MySQL, Oracle, MS-SQL Server, HBase, Cassandra, DynamoDB, MongoDB</>,
       },
     ],
   },
@@ -189,7 +183,7 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about data engineering and AI...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -198,7 +192,7 @@ const blog = {
 const work = {
   label: "Work",
   title: "My projects",
-  description: `Design and dev projects by ${person.name}`,
+  description: `Data Engineering and AI projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
