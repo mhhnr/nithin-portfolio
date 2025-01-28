@@ -302,6 +302,11 @@ const gallery = {
       alt: "image",
       orientation: orientationPattern[i] === 'v' ? 'vertical' : 'horizontal'
     };
+  }).filter(image => {
+    // Add image numbers to skip here
+    const skipImages = [ "00017" ];
+    const imageNum = image.src.match(/img-(\d{5})/)[1];
+    return !skipImages.includes(imageNum);
   }),
 };
 
