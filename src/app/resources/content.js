@@ -293,7 +293,7 @@ const gallery = {
   label: "Gallery",
   title: "My photo gallery",
   description: `A photo collection by ${person.name}`,
-  // Images from https://pexels.com
+  // Images
   images: Array.from({ length: 51 }, (_, i) => {
     const num = (i + 1).toString().padStart(5, '0');
     const orientationPattern = "hvvvvvvvvhvhvvhvhvvvvvvhvvvhhvvvvhhhhhvvvvhvvhvvhvv";
