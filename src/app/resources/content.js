@@ -304,7 +304,7 @@ const gallery = {
     };
   }).filter(image => {
     // Add image numbers to skip here
-    const skipImages = [ "00013","00017" ];
+    const skipImages = [ "00008","00009","00012","00013","00017" ];
     const imageNum = image.src.match(/img-(\d{5})/)[1];
     return !skipImages.includes(imageNum);
   }),
